@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import 'bulma';
+
+import Register from './components/auth/Register';
 
 class App extends React.Component {
   render() {
     return (
-      <h1>Outfit Picker Project</h1>
+      <BrowserRouter>
+        <Switch>
+          <Route path ="/register" component={Register} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
